@@ -1,15 +1,35 @@
 Rails.application.routes.draw do
   devise_for :users
-  scope "/admin" do
-    resources :users
+ 
+ resources :users, only: [] do 
+    collection do
+      get 'dashboard'
+    end
   end
 
-  #resources :items
-
-  resources :roles
-
-  authenticated :user do
-    root :to => 'welcome#index', as: :authenticated_root
+  resources :admins, only: [] do 
+    member do
+      get 'dashboard'
+    end
   end
-  root :to => 'welcome#index'
+
+  resources :super_user, only: [] do 
+    member do
+      get 'dashboard'
+    end
+  end
+
+  resources :dietitians, only: [] do 
+    member do
+      get 'dashboard'
+    end
+  end
+
+  resources :patients, only: [] do 
+    member do
+      get 'dashboard'
+    end
+  end
+
+  root 'users#dashboard'
 end
