@@ -2,12 +2,12 @@
 
 @font-face {
 font-family:'futura_md_btmedium';
-src: url('16020_futuram-webfont.eot');
-src: url('16020_futuram-webfont.eot?#iefix') format('embedded-opentype'),
-url('16020_futuram-webfont.woff2') format('woff2'),
-url('16020_futuram-webfont.woff') format('woff'),
-url('16020_futuram-webfont.ttf') format('truetype'),
-url('16020_futuram-webfont.svg#futura_md_btmedium') format('svg');
+src: url('fonts/16020_futuram-webfont.eot');
+src: url('fonts/16020_futuram-webfont.eot?#iefix') format('embedded-opentype'),
+url('fonts/16020_futuram-webfont.woff2') format('woff2'),
+url('fonts/16020_futuram-webfont.woff') format('woff'),
+url('fonts/16020_futuram-webfont.ttf') format('truetype'),
+url('fonts/16020_futuram-webfont.svg#futura_md_btmedium') format('svg');
 font-weight: normal;
 font-style: normal;
 
@@ -21,6 +21,11 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .nopaddingr {padding-right:0; padding-left:5px;}
 .nopaddingl {padding-left:0; padding-right:5px;}
 
+.navbar-default .navbar-toggle {border-color: #92C648;}
+.navbar-default .navbar-toggle .icon-bar {background-color:#92C648;}
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {background: #fff;}
+.nav>li {text-align: center;}
+
 .navbar-default{background-color:#fff; border-radius:0 0 7px 7px; border-top:0;}
 .navbar-brand{height:auto;}
 
@@ -29,14 +34,147 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .menu li {margin-right:5px;}
 .menu li a{font-size:14px; border:solid 1px #fff; border-radius:7px; padding-top:7px; color:#659599 !important; padding-bottom:7px; transition:all 0.5s ease;}
 .menu li a:hover{border:solid 1px #659599;}
+.menu .activelink {border:solid 1px #659599; font-size:14px; border-radius:7px; padding-top:7px; color:#659599 !important; padding-bottom:7px;}
+/*
 .menu li:last-child a {border:solid 1px #659599; border-radius:7px;}
 .menu li:last-child a:hover {border:solid 1px #659599; border-radius:10px; background:#659599; color:#fff !important;}
+*/
+
+.dashboardmenu {margin-top:31px; font-family:'futura_md_btmedium';}
+.dashboardmenu li {}
+.dashboardmenu li a{font-size:14px; border-right:solid 1px #659599; color:#659599 !important; transition:all 0.5s ease; padding:0px 15px;}
+.dashboardmenu li a:hover{color: #E15757 !important; background: none !important;}
+.dashboardmenu li:last-child a {border: 0;}
+
+.dashpatient {border: 1px solid #ccc; padding: 30px; min-height: 400px; border-radius: 10px;}
+.dashpatient h1 {font-size: 22px; color: #659599; margin: 0; margin-bottom: 10px;}
+.dashpatient h1 span {font-size:18px; color: #666;}
+.dashpatient p {color: #666; font-size: 16px; line-height: 26px;}
+.dashpatient p span {color: #999;}
+.dashpatient p .span2 {margin-left: 7px; padding-left:7px; border-left:2px solid #999;}
+.dashpatient p .span3 {float: left; color: #666; font-size: 15px; margin-right: 5px;}
+.dashpatient .msgpatient {float: left; text-transform: uppercase; font-size: 16px;}
+.dashpatient .msgpatient a {background: #8DC63F; border-radius: 10px; display: block; padding: 10px 25px; text-decoration: none; color: #fff; transition:all 0.5s ease;}
+.dashpatient .msgpatient a:hover {background: #E15757;}
+
+.dashpatientplan {border: 1px solid #ccc; padding: 30px 30px 50px 30px; border-radius: 10px; margin-top:25px;}
+.dashpatientplan h1 {font-size: 22px; color: #659599; margin: 0; margin-bottom: 20px;}
+.dashpatientplan p {color: #666; font-size: 18px; margin-bottom: 5px;}
+.dashpatientplan p span {color: #999; font-size: 14px;}
+.dashpatientplan ul {margin: 0; padding: 0; list-style: none; margin-bottom:20px;}
+.dashpatientplan ul li {color: #666; font-size: 16px; float: left; margin-right: 20px;}
+
+
+.dashpatientplan .ptntchckbx1 {width:15% !important;}
+.dashpatientplan .ptntchckbx {float:left; width:9%; margin-right: 2%; margin-bottom: 20px;}
+.dashpatientplan .ptntchckbx .squaredTwo input {-webkit-appearance: none;}
+.dashpatientplan .ptntchckbx .squaredTwo {width: 100%; height: auto; background: #fcfff4; position: relative;}
+.dashpatientplan .ptntchckbx .squaredTwo label div {margin-left:21px; color: #666; font-size: 16px; background: #fff; font-weight: normal; padding: 0px 0px 0px 9px; width: 100%}
+.dashpatientplan .ptntchckbx .squaredTwo label {cursor: pointer; position: absolute;	width: auto; height: 20px; left: 0px; top: 0px; background: #ececec;}
+.dashpatientplan .ptntchckbx .squaredTwo label:after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; content: ''; position: absolute; width: 12px; height: 7px; background: transparent; top: 6px; left: 4px; border: 3px solid #A9A9A9; border-top: none; border-right: none; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform:rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);}
+.dashpatientplan .ptntchckbx .squaredTwo label:hover::after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter:alpha(opacity=30); opacity: 0.5;}
+.dashpatientplan .ptntchckbx .squaredTwo input[type=checkbox]:checked + label:after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1;}
+
+.dashrecord {border: 1px solid #ccc; padding: 30px 30px 0px 30px; border-radius: 10px; min-height: 400px;}
+.dashrecord p {font-size: 22px; color: #659599; margin: 0; margin-bottom:25px;}
+.dashrecord .records {margin-bottom: 30px;}
+.dashrecord .records .recorddate {background: #659599; color: #fff; font-size: 13px; text-align: center; border-radius: 10px; padding:11px 10px; float: left;}
+.dashrecord .records .recorddate span {font-size: 22px;}
+.dashrecord .records .recorddish {font-size: 16px; color: #666; line-height: 24px;}
+.dashrecord textarea {border: 1px solid #ccc; padding: 20px; min-height: 200px; border-radius: 10px; color: #999; font-size: 18px; width: 100%; margin-bottom: 20px; outline: none;}
+.dashrecord input {color: #fff; padding: 15px 30px 12px 30px; background: #8DC63F; transition:all 0.5s ease; text-transform: uppercase; float: right; border-radius: 10px; border: 0; font-size: 18px;}
+.dashrecord input:hover {background: #E15757;}
+
+.dietitianmenu {background: #659599; border-radius: 10px;}
+.dietitianmenu ul li {font-size: 15px;}
+.dietitianmenu ul li a {color: #fff !important; transition:all 0.5s ease; text-transform: uppercase; border-right: 1px solid #B2CACC; padding: 15px 40px;}
+.dietitianmenu ul li a:hover {background: #E15757 !important;}
+.dietitianmenu .dietitianmainmenu ul {margin: 0; padding: 0;}
+.dietitianmenu .dietitianmainmenu ul li {float: left; padding: 10px; text-transform: uppercase;}
+.dietitianmenu .dietitianmainmenu ul li a {text-decoration: none;  color: #fff !important;}
+.dietitianmenu .dietitianmainmenu ul li a:hover { color: #fff;}
+
+.patientdashboard {border: 1px solid #ccc; padding:30px; border-radius: 10px;}
+.patientdashboard h1 {font-size: 24px; line-height: 32px; color: #659599; margin: 0; margin-bottom: 20px;}
+.patientdashboard .pd-sidelinks {border: 1px solid #ccc; border-radius: 10px;}
+.patientdashboard .pd-sidelinks ul {list-style: none; margin: 0; padding: 0;}
+.patientdashboard .pd-sidelinks ul li {border-bottom: 1px solid #ccc; text-transform: uppercase; font-size: 15px;}
+.patientdashboard .pd-sidelinks ul li:first-child:hover a {border-radius: 10px 10px 0px 0px;}
+.patientdashboard .pd-sidelinks ul li:last-child:hover a {border-radius: 0px 0px 10px 10px;}
+.patientdashboard .pd-sidelinks ul li:last-child {border-bottom: 0;}
+/*
+.pntdashboard .pd-sidelinks ul li:hover :last-child {border-radius: 0px 0px 10px 10px;}
+*/
+.patientdashboard .pd-sidelinks ul li a {padding: 15px 20px; color: #659599; text-decoration: none; display: block;  transition:all 0.5s ease;}
+.patientdashboard .pd-sidelinks ul li a:hover {color: #fff; background: #659599;}
+.patientdashboard .pd-sidelinks ul li .pd-firstlinkactive {padding: 15px 20px; color: #fff; background: #659599;border-radius: 10px 10px 0px 0px;}
+.patientdashboard .pd-sidelinks ul li .pd-linkactive {padding: 15px 20px; color: #fff; background: #659599;border-radius: 0px 0px 0px 0px;}
+.patientdashboard .pd-cntnt {padding: 0px 0px 0px 30px; color: #666; font-size: 16px; line-height: 24px;}
+.patientdashboard .pd-cntnt span {color: #999;}
+.patientdashboard .pd-cntnt .heading {color: #000; font-size: 16px; margin-bottom: 25px;}
+.patientdashboard .pd-cntnt p {margin-bottom:25px; line-height: 22px;}
+.ds-content p {color: #666; font-size: 16px;}
+.ds-content p span {font-size: 12px;}
+.ds-content .submit-session {font-size: 18px; text-transform: uppercase; color: #fff; background: #8DC63F; padding:13px 20px 10px 20px; border-radius: 10px; border: 0; outline: none; transition:all 0.5s ease; margin-top: 10px;}
+.ds-content .submit-session:hover {background: #E15757;}
+
+.registereddietitian {border: 1px solid #ccc; padding:30px; border-radius: 10px; margin-bottom: 30px;}
+.registereddietitian h1 {font-size: 24px; line-height: 32px; color: #659599; margin: 0; margin-bottom: 20px;}
+.registereddietitian .rd-img {float: left;}
+.registereddietitian .rd-img img {margin-bottom: 10px; border-radius: 10px; color: #666; font-size: 16px;}
+.registereddietitian .rd-img span {font-size: 12px;}
+.registereddietitian .rd-img .greencptn {color: #7EB138;}
+.registereddietitian .rd-img .redcptn {color: #E15757;}
+
+.schedulesession {border: 1px solid #ccc; padding:30px; border-radius: 10px;}
+.schedulesession h1 {font-size: 24px; line-height: 32px; color: #659599; margin: 0; margin-bottom: 20px;}
+.schedulesession input[type=radio].css-checkbox {width: 1px;}
+.schedulesession input[type=radio].css-checkbox + label.css-label {
+    padding-left: 26px;
+    height: 21px;
+    display: inline-block;
+    line-height: 21px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.schedulesession input[type=radio].css-checkbox:checked + label.css-label {
+    background-position: 0 -21px;
+}
+.schedulesession label.css-label {
+    background-image: url(http://csscheckbox.com/checkboxes/u/csscheckbox_5ab92245cf78caac21ff087cfc374219.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
 
 .bannerinner {margin-bottom: 20px;}
 .bannerinner img {border-radius: 7px;}
-.bannerinner .pagetitle {position: absolute; bottom:30px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.9); color: #fff; font-size: 30px;}
-.bannerinner .pagetitle1 {position: absolute; bottom:87px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.9); color: #fff; font-size: 30px;}
-.bannerinner .watchvideo {position: absolute; bottom:30px; left: 71px; padding:10px 15px 5px 45px; background: rgba(150, 201, 80, 0.9); color: #fff; font-size: 30px;}
+.bannerinner .pagetitle {position: absolute; bottom:30px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.8); color: #fff; font-size: 30px;}
+.bannerinner .pagetitle1 {position: absolute; bottom:87px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.8); color: #fff; font-size: 30px;}
+.bannerinner .watchvideo {position: absolute; bottom:30px; left: 71px; padding:10px 15px 5px 45px; background: rgba(150, 201, 80, 0.8); color: #fff; font-size: 30px;}
+
+.inner-contentarea1 {margin:45px 0px 25px 0px;}
+.inner-contentarea1 p {color: #666; line-height: 24px; font-size:18px; padding-left: 20px; margin-bottom: 25px;}
+.inner-contentarea1 .mostpopular {border: 1px solid #ccc; border-radius: 10px; padding-bottom:30px;}
+.inner-contentarea1 .mostpopular .mostpopulartitle {padding:15px 20px 12px 34px; border-bottom: 1px solid #ccc; font-size: 18px; color: #666; text-transform: uppercase;}
+.inner-contentarea1 .mostpopular .mostpopulartitle span {font-size: 12px; color: #4EA1CC; text-transform: uppercase; text-align: center; float: right; margin-top: 5px}
+.inner-contentarea1 .mostpopular .mostpopulartitle span a { color: #4EA1CC; text-decoration: none;}
+.inner-contentarea1 .mostpopular .mostpopulartitle span a:hover { color: #7EB138;}
+.inner-contentarea1 .mostpopular .mostpopularulli {padding: 20px 20px 70px 20px;}
+.inner-contentarea1 .mostpopular .mostpopularulli ul {list-style: none; margin: 0; padding: 0;}
+.inner-contentarea1 .mostpopular .mostpopularulli ul li {font-size: 16px; line-height: 26px;}
+.inner-contentarea1 .mostpopular .mostpopularulli ul li a {text-decoration: none; color: #4EA1CC;}
+.inner-contentarea1 .mostpopular .mostpopularulli ul li a:hover {color: #7EB138;}
 
 .inner-contentarea {border: 1px solid #ccc; border-radius: 10px; padding: 20px 25px 10px 40px; padding-bottom:30px;}
 .inner-contentarea p {color: #666; line-height: 24px; font-size: 16px; margin-bottom: 20px;}
@@ -45,11 +183,16 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .inner-contentarea .aboutulli li {line-height: 20px; color: #666; font-size: 15px; margin-bottom:7px;}
 .inner-contentarea .aboutulli li ul {list-style: none; margin-top: 5px; margin-left:15px;}
 
+.dashboard1 {border: 1px solid #ccc; border-radius: 10px; padding:20px;}
+.dashboard1 h1 {font-size: 24px; line-height: 32px; color: #659599; margin: 0; margin-bottom: 20px;}
+.dashboard1 .dash3box {background: #E15757; color: #fff; text-transform: uppercase; border-radius: 10px; padding:20%; text-align: center; font-size: 50px; margin-bottom: 10px;}
+.dashboard1 .dash3boxcontent {font-size: 18px; line-height: 18px; color: #666;}
+.dashboard1 .dash3boxcontent span {font-size: 12px;}
+
 .blogdetails {border: 1px solid #ccc; border-radius: 10px; padding:25px;}
 .blogdetails ul {list-style: none; margin: 0; padding: 0;}
 .blogdetails ul li {margin-bottom:40px;}
 .blogdetails ul li .blogimg {float: left; width: 20%; margin-right: 5%;}
-.blogdetails ul li .blogimg 
 .blogdetails ul li .blogline {float: left; width: 75%;}
 .blogdetails ul li .blogline p {color: #797979; font-size: 14px; line-height: 22px;}
 .blogdetails ul li .blogline .blogtitle {color: #659599; font-size: 20px; line-height: 22px; margin-bottom:20px; position: relative;}
@@ -74,10 +217,160 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .categories ul li a {color: #4FA1CC; text-decoration: none;}
 .categories ul li a:hover {color: #8DC63F;}
 
+.cntctsls {float: left; font-size: 18px; margin-top: 10px; margin-bottom: 43px;}
+.cntctsls a {padding: 15px 20px; text-decoration: none; color: #fff; background: #8DC63F; text-transform: uppercase; border-radius: 10px; transition:all 0.5s ease;}
+.cntctsls a:hover {background: #EC6565;}
+
+.signup {border: 1px solid #ccc; border-radius: 10px; padding:20px 100px;}
+.signup p {color: #666; font-size:16px; line-height: 22px; margin-bottom:20px;}
+.signup .signupinputs input {width: 100%; float: left; background: #ececec; border: 0; margin-bottom: 30px; padding:10px; color: #838383; font-size: 20px; outline: none; transition:all 0.5s ease; border: 1px solid #fff;}
+.signup .signupinputs input:hover, .signup .signupinputs input:focus {background: rgba(131, 131, 131, 0.28); border: 1px solid #838383;}
+.signup .signupinputs .signupbtn {background: #8DC63F; padding:5px 25px; color: #fff; outline: none; border: 0; border-radius: 10px; font-size: 16px; width: auto; margin: 0 auto; float: none; display: block; border: 0;}
+.signup .signupinputs .signupbtn:hover {background: #EC6565; border: 0;}
+.signup .signupinputs .signupbtn:focus {background: #EC6565; border: 0;}
+/*.signup .signupinputs input[type=checkbox] {background: #ececec; border: 0; margin: 0; margin-bottom: 30px; padding:20px !important; width: auto; cursor: pointer; -webkit-appearance: none;}*/
+.squaredTwo input[type="checkbox"], input[type="radio"] {margin-left: 0px;}
+.squaredTwo {
+	width: 100%;
+	height: auto;
+	background: #fcfff4;
+
+/*
+	background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -o-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: -ms-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	background: linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=0 );
+	-webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+	box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0,0,0,0.5);
+*/
+	position: relative;
+}
+.squaredTwo label {border: 0;}
+.squaredTwo label {
+	cursor: pointer;
+	position: absolute;
+	width: 53%;
+	height: 27px;
+	left: 4px;
+	top: 4px;
+    background: #ececec;
+/*
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+	-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+	box-shadow: inset 0px 1px 1px rgba(0,0,0,0.5), 0px 1px 0px rgba(255,255,255,1);
+
+	background: -webkit-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -moz-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -o-linear-gradient(top, #222 0%, #45484d 100%);
+	background: -ms-linear-gradient(top, #222 0%, #45484d 100%);
+	background: linear-gradient(top, #222 0%, #45484d 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#45484d',GradientType=0 );
+*/
+}
+.agreeline {    position: absolute;
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 180px;
+color: #6b6b6b;
+font-size: 14px;}
+.squaredTwo label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 13px;
+	height: 7px;
+	background: transparent;
+	top: 9px;
+	left: 7px;
+	border: 3px solid #A9A9A9;
+	border-top: none;
+	border-right: none;
+
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+.squaredTwo label:hover::after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	filter: alpha(opacity=30);
+	opacity: 0.5;
+}
+
+.squaredTwo input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.signupnxt {border:solid 1px #e0e0e0; border-radius:10px; padding:30px 50px; margin-bottom: 20px;}
+.signupnxt .signtitle {margin-bottom: 50px; padding:0px 50px;}
+.signupnxt .signtitle h1 {font-size:24px; line-height:32px; color:#659599; margin: 0; margin-bottom: 20px;}
+.signupnxt .signtitle p {color: #666; font-size:16px; line-height: 22px;}
+.signupnxt .signupimg {margin-bottom:15px;}
+.signupnxt .signupimg img {border-radius:7px;}
+.signupnxt .signupnamedesign {width: 100%;}
+.signupnxt .signupnamedesign p {font-size:18px; color: #6b6b6b; margin-bottom: 0; line-height: 20px;}
+.signupnxt .signupnamedesign span {font-size:12px; color: #6d6d6d; line-height: 18px;}
+.signupnxt .signupnamedesign .choose {margin-top: 20px;}
+.signupnxt .signupnamedesign .choose a {background: #639397; border-radius: 10px; text-decoration: none; padding: 10px 20px; color: #fff; transition:all 0.5s ease;}
+.signupnxt .signupnamedesign .choose a:hover {background: #EC6465;}
+.signupnxt .signupdiv {margin-right:3%;}
+.signupnxt .signupbtn {background: #8DC63F; padding:7px 25px; color: #fff; outline: none; border: 0; border-radius: 10px; font-size: 16px; width: auto; margin: 0 auto; float: none; display: block; border: 0; margin-top: 150px; transition:all 0.5s ease;}
+.signupnxt .signupbtn:hover {background: #EC6565; border: 0;}
+.signupnxt signupbtn:focus {background: #EC6565; border: 0;}
+
+.signupbtn1main {margin: 0 auto; display: block; margin-top: 50px; text-align: center;}
+.signupbtn1main .signupbtn1 {background: #8DC63F; padding:7px 25px; color: #fff; outline: none; border: 0; border-radius: 10px; font-size: 16px;  border: 0; transition:all 0.5s ease; margin-right: 15px;}
+.signupbtn1main .signupbtn1:hover {background: #EC6565; border: 0;}
+
+.additional-form {border:solid 1px #e0e0e0; border-radius:10px; padding:30px 100px; margin-bottom: 20px;}
+.additional-form .additionaltitle {margin-bottom: 25px;}
+.additional-form .additionaltitle h1 {font-size:24px; line-height:32px; color:#659599; margin: 0; margin-bottom: 20px;}
+.additional-form .additionaltitle p {color: #666; font-size:16px; line-height: 22px;}
+.additional-form .additionalform {float: right; padding:0px 30px 0px 100px;}
+.additional-form .additionalform .uploadfile {padding:15px 10px; background: #efefef; font-weight: normal; font-size: 20px; color: #888; width: 85%; float: left; outline: none; margin-bottom: 30px;}
+.additional-form .additionalform .uploadbtn {float: left; background: #659599; padding: 15px 10px; color: #fff; font-size: 20px; outline: none; margin-bottom: 25px; width: 15%;}
+.additional-form .additionalform .uploadbtn:hover {background: #EC6565;}
+.additional-form .additionalform .additionaltxtarea {height: 250px; padding:20px; background: #e5e5e5; color: #888; line-height: 20px; font-size: 20px; border: 0; width: 100%; margin-bottom: 30px; outline: none;}
+.additional-form .additionalform .additionalselect {width: 100%; padding:15px 10px; background: #efefef; font-weight: normal; font-size: 20px; color: #888; width: 85%; float: left; outline: none; margin-bottom: 30px;}
 
 
-.bannerform {background:#659599; /*height:351px;*/ border-radius:10px; margin-bottom:20px; padding:40px 45px 10px 45px;}
-.bannerform p {color:#fff; line-height:28px; font-size:18px; margin-bottom:25px;}
+.payment-form {border:solid 1px #e0e0e0; border-radius:10px; padding:30px 100px; margin-bottom: 20px;}
+.payment-form .paymenttitle {margin-bottom: 25px;}
+.payment-form .paymenttitle h1 {font-size:24px; line-height:32px; color:#659599; margin: 0; margin-bottom: 20px;}
+.payment-form .paymenttitle p {color: #666; font-size:16px; line-height: 22px;}
+.payment-form .paymentform {float: right; padding:0px 30px 0px 100px; width: 100%;}
+.payment-form .paymentform input {width: 100%; background: #e5e5e5; color: #919191; margin-bottom: 30px; padding: 15px 10px; font-size: 20px; border: 0; outline: none;}
+
+.congratsvdo {width: 50%;}
+.congratsvdo iframe {width: 100%; max-height: 300px;}
+
+.signupmedication {border:solid 1px #e0e0e0; border-radius:10px; padding:30px 0px; margin-bottom: 20px;}
+.signupmedication .medicationtitle {margin-bottom: 25px; padding:0px 100px;}
+.signupmedication .medicationtitle h1 {font-size:24px; line-height:32px; color:#659599; margin: 0; margin-bottom: 20px;}
+.signupmedication .medicationtitle p {color: #666; font-size:16px; line-height: 22px;}
+.signupmedication .medications-search {float: right; margin-right: 10px;}
+.signupmedication .medications-search input {background: #eee; color: #666; font-style: italic; font-size: 14px; border: 0; padding:10px 10px 10px 40px; width: 250px; outline: none; transition:all 0.5s ease;}
+.signupmedication .medications-search input:hover, .signupmedication .medications-search input:focus {background: #e0e0e0; color: #666; font-style: italic; font-size: 14px; border: 0; padding:10px 10px 10px 40px; width: 300px; outline: none;}
+
+.clinicalchckbx .squaredTwo input {-webkit-appearance: none;}
+.clinicalchckbx .squaredTwo {width: 100%; height: auto; background: #fcfff4; position: relative;}
+.clinicalchckbx .squaredTwo label div {margin-left:21px; color: #666; font-size: 14px; background: #fff; font-weight: normal; padding: 0px 0px 0px 9px;}
+.clinicalchckbx .squaredTwo label {cursor: pointer; position: absolute;	width: auto; height: 20px; left: 0px; top: 0px; background: #ececec;}
+.clinicalchckbx .squaredTwo label:after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; content: ''; position: absolute; width: 12px; height: 7px; background: transparent; top: 6px; left: 4px; border: 3px solid #A9A9A9; border-top: none; border-right: none; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform:rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);}
+.clinicalchckbx .squaredTwo label:hover::after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; filter:alpha(opacity=30); opacity: 0.5;}
+.clinicalchckbx .squaredTwo input[type=checkbox]:checked + label:after {-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1;}
+
+.bannerform {background:#659599; /*height:351px;*/ border-radius:10px; margin-bottom:20px; padding:34px 45px 10px 45px;}
+.bannerform p {color:#fff; line-height:28px; font-size:22px; margin-bottom:25px;}
 .bannerform p span {color:#BCCED0; font-size:16px;}
 .bannerform input {background: #fff; border-radius:7px; border:0; padding:10px 15px; margin-bottom:10px; width: 100%; color:#989898; font-size:16px; outline:none; transition:all 0.5s ease;}
 .bannerform input:hover {background:#BCCED0; color:#659599;}
@@ -113,8 +406,6 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .worarea .worktabs .worktabhead {font-size: 18px; color: #6b6b6b; margin-bottom: 5px;}
 .worarea .worktabs p {font-size: 14px; color: #6d6d6d; line-height: 22px;}
 
-
-
 .homebtm {border: solid 1px #e0e0e0; border-radius: 10px; padding:0; min-height: 230px; margin-bottom: 20px;}
 .homebtm h1 {background:#659599; padding:25px 25px 15px 25px; color: #fff; font-size:18px; border-radius: 10px; border-bottom-left-radius:0px; border-bottom-right-radius:0px; margin: 0}
 .homebtm h1 div {float: right; font-size: 12px; text-transform: uppercase; margin-top: 10px;}
@@ -130,16 +421,40 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .footer .footerlft ul li {float: left; margin-right: 10px; padding-right: 10px; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; border-right: 1px solid #666;}
 .footer .footerlft ul li:last-child {border-right: 0;}
 .footer .footerlft ul li a {text-decoration: none; color: #6DAFD3; transition:all 0.2s ease;}
-.footer .footerlft ul li a:hover {color: #7EB138;}
+.footer .foot100%erlft ul li a:hover {color: #7EB138;}
 .footer .footerlft p {color: #666; font-size: 12px; text-transform: uppercase;}
 .footer .footerrght {text-align: right; color: #666; margin-top: 25px;}
 .footer .footerrght p {}
 .footer .footerrght p img {margin-top:-15px; margin-left:5px;}
 
+
+
+
+
+.accordionButton {width: 100%; float: left; cursor: pointer; font-size:16px; margin-left:0px; color: #fff; padding:1% 2% 1% 2%; background: #666;}
+.accordionContent {width: 100%; float: left; color:#000; padding-left:0px; font-size:12px;}
+.accordionContent .acccont1 {background: #f5f5f5; color: #666; padding:1% 2% 1% 2%; font-size: 16px;}
+.accordionContent .acccont2 {background: #fff; color: #666; padding:1% 2% 1% 2%; font-size: 16px;}
+.accordionContent p{width: 100%; float: left; color:#000; padding-top:7px; padding-left:0px; font-size:12px; padding-bottom:10px;}
+.accordionContent a{color:#185996; text-decoration:none;}
+.accordionContent a:hover{color:#000000; text-decoration:none;}
+.accordionContent ul{list-style:none; margin:0 auto; padding:0 auto;}
+.accordionContent ul li{padding-left:13px; background:url(images/bread-arrow.jpg) no-repeat -7px 6px; color:#333333; font-size:11px; line-height:18px;}
+.accordionContent ul li a{font-family:Arial; font-size:11px; line-height:15px; color:#333333; text-decoration:none; font-weight:400;}
+.accordionContent ul li a:hover{color:#000000; text-decoration:none;}
+
+.on {color:#fff; border:none;}
+.borac{float:left; margin-left:0px; width: 100%; color: #fff; margin-bottom: 1px;}
+.over {color:#fff;}
+
+
+
+
 @media (max-width: 1200px) { 
     .bannerform{height: 289px;}
 }
 @media (max-width: 992px) { 
+.inner-contentarea {padding: 20px;}
 .bannerform {background:#659599; /*height:351px;*/ border-radius:10px; margin-bottom:20px; padding:10px 15px; height: 220px;}
 .bannerform p {margin-bottom:10px; font-size: 15px; line-height: 20px;}
 .bannerform p span {font-size: 14px;}
@@ -148,18 +463,52 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .speakbor {padding: 30px 40px;}
 .speakbor h1 {font-size: 20px;}
 .speakbor .speaknamedesig p {font-size: 14px;}
+.signupnxt {padding: 30px 20px;}
+.signupnxt .signtitle {padding: 0;}
+.signupnxt h1 {font-size: 20px;}
+.signupnxt .signupnamedesign p {font-size: 14px;}
 .homebtm {min-height:220px;}
 .homebtm p {padding:15px 15px 0px 15px;}
 .homebtm h1 {padding: 15px 15px 10px; font-size: 17px; line-height: 20px;}
 .homebtm h1 div {float: none; margin-top: 0;}
+.dashboard1 .dashdvd {margin-bottom: 15px;}
+.mainwork .howwecan {padding:10px 10px 0px 10px;}
+.mainwork .worksession .session-p sup {font-size: 30px;}
+.mainwork .worksession .session-p {font-size: 50px;}
+.mainwork .worksession {padding: 10px 30px;}
+    .mainwork .howwecan .howhead {margin-bottom: 7px;}
+    .recentposts {padding: 25px 25px 0px 25px; margin: 20px 0px;}
+    .recentposts ul li {width: 50%; float: left; text-align: center;}
+    .dietitianmenu ul li a {font-size: 12px; padding: 15px 10px;}
+    
+    .patientdashboard .pd-sidelinks {margin-bottom: 30px; clear: both; border: 0;}
+    .patientdashboard .pd-sidelinks ul {width: 100%;}
+    .patientdashboard .pd-sidelinks ul li {border-right: 1px solid #CCC; border-bottom: 0; float: left;}
+    .patientdashboard .pd-sidelinks ul li a {padding: 10px;}
+    .patientdashboard .pd-sidelinks ul li a:hover { background: none; color:#F26762; }
+    .patientdashboard .pd-sidelinks ul li .pd-linkactive {padding: 10px; background: none; color:#F26762; }
+    .patientdashboard .pd-sidelinks ul li .pd-firstlinkactive  {padding: 10px; background: none; color:#F26762; }
+    .patientdashboard .pd-cntnt {padding: 0;}
+    .registereddietitian .rd-img {float: none; margin-right: 5%;}
+    .cntctsls {font-size: 14px;}
+    .topspace {margin-top: 20px;}
+    .squaredTwo label {padding: 0px 13px; margin: 0px 0px 0px -5px;}
+    .squaredTwo label div {width: 100%}
+    .dashpatientplan .ptntchckbx {width: 47%;}
+    .dashpatientplan .ptntchckbx1 {width: 100% !important;}
+    .dashpatient {min-height:80px; overflow: auto;}
+    .dashboardmenu li a{font-size:14px; border-right:solid 1px #659599; color:#659599 !important; transition:all 0.5s ease; padding:0px 15px;}
 }
-@media (max-width: 768px) { 
+
+@media (max-width: 767px) { 
 .banner {margin-bottom: 20px;}
 .bannerform input[type="submit"] {margin-bottom: 10px;}
 .speakbor {padding: 10px;}
 .speakbor h1 {font-size:15px; line-height: 22px;}
 .speakbor .speakimg {margin-bottom: 5px;}
 .speakbor .speaknamedesig {margin-bottom: 15px; text-align: center;}
+.signupnxt .signupimg {margin-bottom: 5px;}
+.signupnxt .signupnamedesign {margin-bottom: 15px; text-align: center;}
 .homebtm {height: auto; min-height: 0;}
 .homebtm h1 div {margin-top: 5px;}
 .footer .footerrght, .footer .footerlft {width: 100%;}
@@ -170,4 +519,39 @@ body {font-family:'futura_md_btmedium'; background:#fff;}
 .inner-contentarea p {font-size: 14px;}
 .bannerinner .pagetitle {bottom: 7px; padding: 7px; font-size: 14px;}
 .inner-contentarea .aboutulli {margin-top: 0;}
+.signup {padding: 20px;}
+.bannerinner .pagetitle1 {bottom: 50px; font-size: 20px; padding:5px;}
+.bannerinner .watchvideo {font-size: 20px; left:15px; bottom: 11px; padding: 5px;}
+.blogdetails ul li .blogline .blogtitle .blogshare {position: relative; margin: 10px 0px;}
+.navbar-brand > img {width: 175px;}
+.navbar-toggle {margin-top: 16px;
+margin-right: 0px;}
+.mainwork .howwecan {margin-bottom: 10px;}
+.workvideo {width: auto;}
+.resp360 {width: 100%;}
+.resp3601 {float: left;}
+.mainwork .worksession {padding: 7px; min-height: 217px;}    
+.mainwork .worksession .session-p {font-size: 100px;}
+.mainwork .worksession p {margin-top: 0;}
+.navbar-brand {padding: 15px 0px;}
+.dietitianmainmenuicon {left: 50%; margin-left: -5%; position:absolute; margin-top: 0px;}
+.dietitianmenu {margin-top: 40px;}
+.dietitianmenu ul li a {padding: 10px; text-align: center;}
+.registereddietitian .rd-img {margin-right: 5%;
+text-align: center;
+margin-bottom: 15%;}
+.registereddietitian .rd-img img {margin-bottom: 0;}
+.schedulesession {float: left; margin-bottom: 30px;}
+.payment-form {padding: 20px;}
+.payment-form .paymentform {padding: 0px;}
+.signupmedication {padding: 0;}
+.signupmedication .medicationtitle {padding: 20px; padding-bottom: 0;}
+.medications-search {margin-bottom: 10px;}
+.payment-form {padding: 30px;}
+.congratsvdo {width: 100%;}
+.additional-form {padding: 30px;}
+.additional-form .additionalform {padding: 0; float: none;}
+.signupbtn1 {margin-bottom: 10px;}
+.dashboardmenu li a {border-right: 0; border-bottom: 1px solid #659599; padding: 7px 0px;}
+
 }
