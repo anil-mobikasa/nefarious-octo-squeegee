@@ -2,7 +2,7 @@ class AdminsController < ApplicationController
   #before_action :validate_admin
 
     def dashboard
-    	
+      	
     end
 
     def approve_user

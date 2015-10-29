@@ -1,3 +1,97 @@
   <% flash.each do |name, msg| %>
     <%= content_tag :div, msg, id: "flash_#{name}" %>
   <% end %>
+<div class="row">
+            <div class="col-sm-8 banner"><%= image_tag("banner.jpg", alt:"", width: "100%") %></div>
+            <div class="col-sm-4">
+                <div class="col-sm-12 bannerform">
+                    <p>Start living healthier!<br/>
+                        <span>Sign Up or Login In to you account.</span>
+                    </p>
+                    <div class="col-xs-12 nopadding"><input type="text" name="Email address" value="Email address" /></div>
+                    <div class="col-xs-12 nopadding"><input type="text" name="Password" value="Password" /></div>
+                    <div class="col-xs-6 nopaddingl"><input type="submit" name="Sign up" value="Sign up" /></div>
+                    <div class="col-xs-6 nopaddingr"><input type="submit" name="Login" value="Login" /></div>
+                    <div class="clear"></div>
+                    <p class="signing"><%= link_to "Need help signing in?" %></p>
+                    
+                </div>
+            </div>
+ </div>
+        <div class="row nomargin speakbor">
+            <h1>Speak to one of our 100+ expert registered dieticians who create speacialized nutrition plans for a range of health conditions</h1>
+           <div class="row">
+                <div class="col-sm-2 speakdiv">
+                   <div class="speakimg">
+                   <%= image_tag("speak-pic1.jpg", class: "img-responsive") %>
+                   </div>
+                   <div class="speaknamedesig">
+                       <p>Melissa Levine</p>
+                       <span>Prenatal,<br/>
+                       Gestational Diabetes</span>
+                   </div>
+               </div>
+                <div class="col-sm-2 speakdiv">
+                    <div class="speakimg">
+                    <%= image_tag("speak-pic2.jpg", class: "img-responsive") %>
+                    </div>
+                   <div class="speaknamedesig">
+                       <p>Jessica Lantern</p>
+                       <span>Gastrointestinal,<br/>
+                       Bariatric Surgery</span>
+                   </div>
+                </div>
+                <div class="col-sm-2 speakdiv">
+                    <div class="speakimg">
+                    <%= image_tag("speak-pic3.jpg", class: "img-responsive") %>
+                    </div>
+                   <div class="speaknamedesig">
+                       <p>Elizabeth Anchor</p>
+                       <span>Diabetes,<br/>
+                       Blood Sugar Control</span>
+                   </div>
+                </div>
+                <div class="col-sm-2 speakdiv">
+                    <div class="speakimg">
+                    <%= image_tag("speak-pic4.jpg", class: "img-responsive") %>
+                    </div>
+                   <div class="speaknamedesig">
+                       <p>Janet Coban</p>
+                       <span>Cardiac,<br/>
+                       Hypertension</span>
+                   </div>
+                </div>
+                <div class="col-sm-2 speakdiv"></div>
+                <div class="col-sm-2 speakdiv"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="col-sm-12 homebtm">
+                    <h1>Diets & Health Conditions</h1>
+                    <p>
+                        Explore the connection between diets and various health conditions as well as how medical nutrition therapy can help you.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12 homebtm">
+                    <h1>For Enterprise Organizations</h1>
+                    <p>
+                        Learn about and be a part of the growing enterprise network offering trusted TelaDietitian services.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="col-sm-12 homebtm">
+                    <h1>Contact Nutrify<div><a href="#">Send a message</a></div></h1>
+                    <p>
+                        434.543.8392<br/>
+                        <a href="mailto:info@nutrify-app.com">info@nutrify-app.com</a><br/><br/>
+                        18372 10th St.<br/>
+                        New York, NY 55555
+                    </p>
+                </div>
+            </div>
+        </div>
+</div>
