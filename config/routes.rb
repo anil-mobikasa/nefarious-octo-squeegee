@@ -31,5 +31,6 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'users#dashboard'
+  #root 'users#dashboard'
+  root 'welcome#index'
 end

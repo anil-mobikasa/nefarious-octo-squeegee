@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   
 
-  before_action :authenticate_user_role_and_redirect, only: [:dashboard]
+  #before_action :authenticate_user_role_and_redirect, only: [:dashboard]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def dashboard
