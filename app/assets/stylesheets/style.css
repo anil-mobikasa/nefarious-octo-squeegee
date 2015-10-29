@@ -1,0 +1,173 @@
+*{margin:0px auto; padding:0px;}
+
+@font-face {
+font-family:'futura_md_btmedium';
+src: url('16020_futuram-webfont.eot');
+src: url('16020_futuram-webfont.eot?#iefix') format('embedded-opentype'),
+url('16020_futuram-webfont.woff2') format('woff2'),
+url('16020_futuram-webfont.woff') format('woff'),
+url('16020_futuram-webfont.ttf') format('truetype'),
+url('16020_futuram-webfont.svg#futura_md_btmedium') format('svg');
+font-weight: normal;
+font-style: normal;
+
+}
+
+body {font-family:'futura_md_btmedium'; background:#fff;}
+
+.clear {clear: both;}
+
+.nopadding {padding:0;}
+.nopaddingr {padding-right:0; padding-left:5px;}
+.nopaddingl {padding-left:0; padding-right:5px;}
+
+.navbar-default{background-color:#fff; border-radius:0 0 7px 7px; border-top:0;}
+.navbar-brand{height:auto;}
+
+.menumain{padding:0 40px;}
+.menu{margin-top:20px; font-family:'futura_md_btmedium';}
+.menu li {margin-right:5px;}
+.menu li a{font-size:14px; border:solid 1px #fff; border-radius:7px; padding-top:7px; color:#659599 !important; padding-bottom:7px; transition:all 0.5s ease;}
+.menu li a:hover{border:solid 1px #659599;}
+.menu li:last-child a {border:solid 1px #659599; border-radius:7px;}
+.menu li:last-child a:hover {border:solid 1px #659599; border-radius:10px; background:#659599; color:#fff !important;}
+
+.bannerinner {margin-bottom: 20px;}
+.bannerinner img {border-radius: 7px;}
+.bannerinner .pagetitle {position: absolute; bottom:30px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.9); color: #fff; font-size: 30px;}
+.bannerinner .pagetitle1 {position: absolute; bottom:87px; padding:18px 15px 13px 30px; background: rgba(244, 93, 93, 0.9); color: #fff; font-size: 30px;}
+.bannerinner .watchvideo {position: absolute; bottom:30px; left: 71px; padding:10px 15px 5px 45px; background: rgba(150, 201, 80, 0.9); color: #fff; font-size: 30px;}
+
+.inner-contentarea {border: 1px solid #ccc; border-radius: 10px; padding: 20px 25px 10px 40px; padding-bottom:30px;}
+.inner-contentarea p {color: #666; line-height: 24px; font-size: 16px; margin-bottom: 20px;}
+.inner-contentarea .headline {color:#659599; font-size:24px; margin-bottom: 20px;}
+.inner-contentarea .aboutulli {float: left; list-style: none; margin-top: 30px;}
+.inner-contentarea .aboutulli li {line-height: 20px; color: #666; font-size: 15px; margin-bottom:7px;}
+.inner-contentarea .aboutulli li ul {list-style: none; margin-top: 5px; margin-left:15px;}
+
+.blogdetails {border: 1px solid #ccc; border-radius: 10px; padding:25px;}
+.blogdetails ul {list-style: none; margin: 0; padding: 0;}
+.blogdetails ul li {margin-bottom:40px;}
+.blogdetails ul li .blogimg {float: left; width: 20%; margin-right: 5%;}
+.blogdetails ul li .blogimg 
+.blogdetails ul li .blogline {float: left; width: 75%;}
+.blogdetails ul li .blogline p {color: #797979; font-size: 14px; line-height: 22px;}
+.blogdetails ul li .blogline .blogtitle {color: #659599; font-size: 20px; line-height: 22px; margin-bottom:20px; position: relative;}
+.blogdetails ul li .blogline .blogtitle span {color: #999; font-size: 12px;}
+.blogdetails ul li .blogline .blogtitle .blogshare {position: absolute; top: 0; right: 0; font-size: 13px;}
+.blogdetails ul li .blogline .blogtitle .blogshare a {padding: 7px 15px; background:#8DC63F; color: #fff; border-radius:7px; text-decoration: none; transition:all 0.5s ease;}
+.blogdetails ul li .blogline .blogtitle .blogshare a:hover {background: #F36564; color: #fff;}
+
+.recentposts {border: 1px solid #ccc; border-radius: 10px; padding:25px; margin-bottom: 10px;}
+.recentposts p {color: #659599; font-size:22px; line-height: 22px; margin-bottom:15px;}
+.recentposts ul {list-style: none; margin: 0; padding: 0;}
+.recentposts ul li {margin-bottom:40px;}
+.recentposts ul li:last-child {margin-bottom:0px;}
+.recentposts ul li img {border-radius: 10px; margin-bottom: 10px;}
+.recentposts ul li p {font-size: 13px; color: #4FA1CC; line-height: 18px;}
+.recentposts ul li p span {font-size: 12px; color: #797979;}
+
+.categories {border: 1px solid #ccc; border-radius: 10px; padding:25px;}
+.categories p {color: #659599; font-size:22px; line-height: 22px; margin-bottom:15px;}
+.categories ul {list-style: none; margin: 0; padding: 0;}
+.categories ul li {font-size: 16px; line-height: 24px;}
+.categories ul li a {color: #4FA1CC; text-decoration: none;}
+.categories ul li a:hover {color: #8DC63F;}
+
+
+
+.bannerform {background:#659599; /*height:351px;*/ border-radius:10px; margin-bottom:20px; padding:40px 45px 10px 45px;}
+.bannerform p {color:#fff; line-height:28px; font-size:18px; margin-bottom:25px;}
+.bannerform p span {color:#BCCED0; font-size:16px;}
+.bannerform input {background: #fff; border-radius:7px; border:0; padding:10px 15px; margin-bottom:10px; width: 100%; color:#989898; font-size:16px; outline:none; transition:all 0.5s ease;}
+.bannerform input:hover {background:#BCCED0; color:#659599;}
+.bannerform input:focus {background:#BCCED0; color:#659599;}
+.bannerform input[type=submit] {background: #7EB138; border-radius:7px; border:0; padding:10px 15px; margin-bottom:10px; color:#fff; font-size:16px; outline:none; float: left; margin-right:4%; transition:all 0.5s ease; margin-bottom: 20px; text-transform: uppercase;}
+.bannerform input:last-child[type=submit] {margin-right:0;}
+.bannerform input:hover[type=submit] {background:#F26762;}
+.bannerform .signing a {text-decoration:none; color:#AAC2C4; transition:all 0.5s ease; font-size: 12px;}
+.bannerform .signing a:hover {color:#fff;}
+
+.speakbor{border:solid 1px #e0e0e0; border-radius:10px; padding:30px 50px; margin-bottom: 20px;}
+.speakbor h1{font-size:24px; line-height:32px; color:#659599; margin: 0; margin-bottom: 20px;}
+.speakbor .speakimg {margin-bottom:15px;}
+.speakbor .speakimg img {border-radius:7px;}
+.speakbor .speaknamedesig {width: 100%;}
+.speakbor .speaknamedesig p {font-size:18px; color: #6b6b6b; margin-bottom: 0; line-height: 20px;}
+.speakbor .speaknamedesig span {font-size:12px; color: #6d6d6d; line-height: 18px;}
+.speakbor .speakdiv {margin-right:4%;}
+
+.mainwork {margin-bottom: 20px;}
+.mainwork .howwecan {float: left; border: 1px solid #ccc; border-radius: 10px; padding:40px 120px 54px 60px;}
+.mainwork .howwecan .howhead {font-size:22px; color: #659599; margin-bottom: 20px;}
+.mainwork .howwecan p {color: #666;; line-height: 22px; font-size: 16px;}
+.mainwork .workvideo img {border-radius: 10px;}
+.mainwork .worksession {border-radius: 10px; background: #659599; padding:24px 30px; color: #fff; text-align: center;}
+.mainwork .worksession .session-p {font-size: 100px;}
+.mainwork .worksession .session-p sup {font-size: 56px;}
+.mainwork .worksession p {margin: 0; font-size: 16px; text-transform: uppercase; margin-top: -10px;}
+
+.worarea {border: 1px solid #ccc; border-radius: 10px; padding: 20px 50px 30px 60px;}
+.worarea .worktabs {float: left;}
+.worarea .worktabs img {margin-bottom:30px;}
+.worarea .worktabs .worktabhead {font-size: 18px; color: #6b6b6b; margin-bottom: 5px;}
+.worarea .worktabs p {font-size: 14px; color: #6d6d6d; line-height: 22px;}
+
+
+
+.homebtm {border: solid 1px #e0e0e0; border-radius: 10px; padding:0; min-height: 230px; margin-bottom: 20px;}
+.homebtm h1 {background:#659599; padding:25px 25px 15px 25px; color: #fff; font-size:18px; border-radius: 10px; border-bottom-left-radius:0px; border-bottom-right-radius:0px; margin: 0}
+.homebtm h1 div {float: right; font-size: 12px; text-transform: uppercase; margin-top: 10px;}
+.homebtm h1 div a {color: #fff; text-decoration: none;}.20mebtm p {color: #6c6c6c; line-height:24px;padding:25px 25px 0px 25px; font11ize: 17px;}
+.nomargin{margin-left: 0px; margin-right: 0;}
+.homebtm p {color:#6c6c6c; padding: 20px; line-height: 22px;}
+.homebtm p a {text-decoration: none; color: #6c6c6c; transition:all 0.2s ease;}
+.homebtm p a:hover {color: #F26762;}
+
+.footer {border: 1px solid #ccc; border-radius: 10px; padding:20px 25px 10px 25px; border-bottom: 0; margin-top: 20px;}
+.footer .footerlft {float: left;}
+.footer .footerlft ul {margin: 0; padding: 0; list-style: none; margin-bottom: 10px;}
+.footer .footerlft ul li {float: left; margin-right: 10px; padding-right: 10px; text-transform: uppercase; font-size: 12px; margin-bottom: 10px; border-right: 1px solid #666;}
+.footer .footerlft ul li:last-child {border-right: 0;}
+.footer .footerlft ul li a {text-decoration: none; color: #6DAFD3; transition:all 0.2s ease;}
+.footer .footerlft ul li a:hover {color: #7EB138;}
+.footer .footerlft p {color: #666; font-size: 12px; text-transform: uppercase;}
+.footer .footerrght {text-align: right; color: #666; margin-top: 25px;}
+.footer .footerrght p {}
+.footer .footerrght p img {margin-top:-15px; margin-left:5px;}
+
+@media (max-width: 1200px) { 
+    .bannerform{height: 289px;}
+}
+@media (max-width: 992px) { 
+.bannerform {background:#659599; /*height:351px;*/ border-radius:10px; margin-bottom:20px; padding:10px 15px; height: 220px;}
+.bannerform p {margin-bottom:10px; font-size: 15px; line-height: 20px;}
+.bannerform p span {font-size: 14px;}
+.bannerform input {font-size: 14px; padding: 7px 15px;}
+.bannerform input[type=submit] {font-size: 14px; padding:7px 15px; margin-bottom: 0;}
+.speakbor {padding: 30px 40px;}
+.speakbor h1 {font-size: 20px;}
+.speakbor .speaknamedesig p {font-size: 14px;}
+.homebtm {min-height:220px;}
+.homebtm p {padding:15px 15px 0px 15px;}
+.homebtm h1 {padding: 15px 15px 10px; font-size: 17px; line-height: 20px;}
+.homebtm h1 div {float: none; margin-top: 0;}
+}
+@media (max-width: 768px) { 
+.banner {margin-bottom: 20px;}
+.bannerform input[type="submit"] {margin-bottom: 10px;}
+.speakbor {padding: 10px;}
+.speakbor h1 {font-size:15px; line-height: 22px;}
+.speakbor .speakimg {margin-bottom: 5px;}
+.speakbor .speaknamedesig {margin-bottom: 15px; text-align: center;}
+.homebtm {height: auto; min-height: 0;}
+.homebtm h1 div {margin-top: 5px;}
+.footer .footerrght, .footer .footerlft {width: 100%;}
+.footer .footerlft ul li {float: none; text-align: center; border: 0;}
+.footer .footerlft p {text-align: center; line-height: 22px;}
+.footer .footerrght p {text-align: center;}
+.inner-contentarea .headline {font-size: 18px;}
+.inner-contentarea p {font-size: 14px;}
+.bannerinner .pagetitle {bottom: 7px; padding: 7px; font-size: 14px;}
+.inner-contentarea .aboutulli {margin-top: 0;}
+}
