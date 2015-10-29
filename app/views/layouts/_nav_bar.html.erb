@@ -2,10 +2,10 @@
   <div class="container-fluid menumain">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
       </button>
       <%= link_to image_tag("logo.jpg", alt:""), root_path, :class => "navbar-brand"%>
     </div>
@@ -14,7 +14,13 @@
         <li><%= link_to "About"%></li>
         <li><%= link_to "How it Works"%></li>
         <li><%= link_to "Blog"%></li>
-        <li><%= link_to "Sign Up"%></li>
+        <% if user_signed_in? %>
+        <li><%= link_to "Edit profile", edit_user_registration_path %></li>
+        <li><%= link_to "Sign out", destroy_user_session_path %></li>
+        <% else %>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li> <%= link_to "sign in", new_user_session_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
