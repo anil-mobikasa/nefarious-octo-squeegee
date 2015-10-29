@@ -18,16 +18,12 @@ class ApplicationController < ActionController::Base
     case resource.role.name
       when "admin"
         dashboard_admin_path(resource)
-
       when "super_admin"
         dashboard_super_admin_path(resource)
-
       when "dietitian"
         dashboard_dietitian_path(resource)
-
       when "patient"
         dashboard_patient_path(resource)
-
     end     
   end
 
