@@ -15,12 +15,12 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(resource)
-    case resource.role
+    case resource.role.name
       when "admin"
         dashboard_admin_path(resource)
 
       when "super_admin"
-        dashboard_super_user_path(resource)
+        dashboard_super_admin_path(resource)
 
       when "dietitian"
         dashboard_dietitian_path(resource)
