@@ -1,9 +1,11 @@
 class AdminsController < ApplicationController
   #before_action :validate_admin
+  #load_and_authorize_resource
 
 
   def dashboard
-    @users = User.all	
+    @users = User.all
+
   end
 
 

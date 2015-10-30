@@ -14,12 +14,14 @@ Logged In as: <span style="color:orange"><%= current_user.email %></span>
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.name %></td>
+        <td><%= user.username %></td>
         <td><%= user.email %></td>
         <td><%= user.role.name %></td>
         <td><%= link_to 'Show', user %></td>
+        <% if can? :update, User %>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

@@ -14,7 +14,7 @@ namespace :db do
     @admin_role_id = Role.where(:name => 'admin').first.id
     
     puts "Creating Patients"
-    User.populate 800 do |user|
+    User.populate 10 do |user|
 
         user.username = Faker::Name.name
         user.first_name = Populator.words(1).titleize
@@ -40,12 +40,12 @@ namespace :db do
 
     end
     
-        puts "800 dietitian Added"
+        puts "10 patients Added"
         puts "Creating Dietitians"
     
     #user_ids = User.pluck(:id)
 
-    User.populate 200 do |user|
+    User.populate 10 do |user|
 
         user.username = Faker::Name.name
         user.first_name = Populator.words(1).titleize
@@ -71,12 +71,12 @@ namespace :db do
 
     
     end
-    puts "200 dietitian Added"
+    puts "10 dietitian Added"
     puts "Creating Admins"
     
     #user_ids = User.pluck(:id)
 
-    User.populate 50 do |user|
+    User.populate 10 do |user|
 
         user.username = Faker::Name.name
         user.first_name = Populator.words(1).titleize
@@ -100,6 +100,6 @@ namespace :db do
         
     
     end
-   puts "50 Admin Added"
+   puts "10 Admin Added"
     end
 end

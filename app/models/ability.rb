@@ -2,6 +2,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+    user ||= User.new
+    # Define a few sample abilities
+    # can    :manage , Article
+    # cannot :manage , Comment
+    # can    :read   , Tag , released: true
+
     if user.super_admin?
       puts"+++super_admin+++"
        can :manage, :all
