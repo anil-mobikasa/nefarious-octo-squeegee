@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   belongs_to :role
-  validates_presence_of :name
+  #validates_presence_of :username
   before_save :assign_role
 
   def assign_role

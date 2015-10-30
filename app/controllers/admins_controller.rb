@@ -1,15 +1,11 @@
 class AdminsController < ApplicationController
   #before_action :validate_admin
 
-<<<<<<< HEAD
-    def dashboard
-      	
-    end
-=======
+
   def dashboard
     	
   end
->>>>>>> cff39294498f9f332cb51628d1311e772293d4ec
+
 
   def approve_user
       @user = User.find_by_id(params[id])
