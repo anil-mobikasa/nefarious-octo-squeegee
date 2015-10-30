@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   belongs_to :role
   #validates_presence_of :username
   before_save :assign_role
-
+  
   def assign_role
     self.role = Role.find_by name: "patient" if self.role.nil?
   end

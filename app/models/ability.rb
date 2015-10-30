@@ -9,10 +9,11 @@ class Ability
       puts"+++admin+++"
       #can :manage, :all
       can :read, User
+
       #can :create, User
-      #can :update, User do |item|
-      #  item.try(:user) == user
-      #end
+      # can :update, User do |item|
+      #   item.try(:user) == user
+      # end
       #can :destroy, Item do |item|
       #  item.try(:user) == user
       #end

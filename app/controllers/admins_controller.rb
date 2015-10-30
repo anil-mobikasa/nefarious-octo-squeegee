@@ -3,7 +3,8 @@ class AdminsController < ApplicationController
 
 
   def dashboard
-    @users = User.all	
+    @users = User.all.page params[:page]	
+    authorize! :read, @users
   end
 
 
