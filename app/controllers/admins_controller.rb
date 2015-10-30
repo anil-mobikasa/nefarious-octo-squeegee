@@ -1,10 +1,10 @@
 class AdminsController < ApplicationController
   #before_action :validate_admin
+  #load_and_authorize_resource
 
 
   def dashboard
     @users = User.all.page params[:page]	
-    authorize! :read, @users
   end
 
 
