@@ -23,6 +23,7 @@ namespace :db do
         #user.designation = Populator.words(1..3).titleize
         user.role_id = @patient_role_id
         user.gender = ['Male', 'Female']
+        user.approved = [true, false]
         user.location = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
         user.birthdate = 60.years.ago..22.years.ago
         user.height = 140..190
@@ -35,7 +36,7 @@ namespace :db do
         user.doj = 5.years.ago..Time.now
         user.email = Faker::Internet.email
         user.encrypted_password = "12345678"
-
+        
 
     end
     
@@ -51,6 +52,7 @@ namespace :db do
         user.middle_name = Populator.words(1).titleize
         user.last_name = Populator.words(1).titleize
         #user.designation = Populator.words(1..3).titleize
+        user.approved = [true, false]
         user.role_id = @dietitian_role_id
         user.gender = ['Male', 'Female']
         user.location = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
@@ -65,15 +67,16 @@ namespace :db do
         user.doj = 5.years.ago..Time.now
         user.email = Faker::Internet.email
         user.encrypted_password = "12345678"
+        
 
     
     end
-
+    puts "200 dietitian Added"
     puts "Creating Admins"
     
     #user_ids = User.pluck(:id)
 
-    User.populate 200 do |user|
+    User.populate 50 do |user|
 
         user.username = Faker::Name.name
         user.first_name = Populator.words(1).titleize
@@ -94,9 +97,9 @@ namespace :db do
         user.doj = 5.years.ago..Time.now
         user.email = Faker::Internet.email
         user.encrypted_password = "12345678"
-
+        
     
     end
-   
+   puts "50 Admin Added"
     end
 end
