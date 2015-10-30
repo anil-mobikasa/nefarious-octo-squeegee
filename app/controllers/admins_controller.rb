@@ -1,9 +1,11 @@
 class AdminsController < ApplicationController
   #before_action :validate_admin
 
+
   def dashboard
     @users = User.all	
   end
+
 
   def approve_user
       @user = User.find_by_id(params[id])

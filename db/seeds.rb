@@ -10,7 +10,7 @@ r2 = Role.create({name: "admin", description: "Can read and create patients, die
 r3 = Role.create({name: "dietitian", description: "Can perform create blogs, recipies."})
 r4 = Role.create({name: "patient", description: "Can fix appointment with dietitian."})
 
-u1 = User.create({name: "super_admin", email: "super_admin@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r1.id})
-u2 = User.create({name: "admin", email: "admin@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
-u3 = User.create({name: "dietitian", email: "dietitian@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r3.id})
-u4 = User.create({name: "patient", email: "patient@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r4.id})
+u1 = User.create({username: "super_admin", email: "super_admin@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r1.id})
+u2 = User.create({username: "admin", email: "admin@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r2.id})
+u3 = User.create({username: "dietitian", email: "dietitian@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r3.id})
+u4 = User.create({username: "patient", email: "patient@example.com", password: "aaaaaaaa", password_confirmation: "aaaaaaaa", role_id: r4.id})
