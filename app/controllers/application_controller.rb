@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
 
   def check_user_role
-    if current_user.role.name != 'super_admin' or current_user.role.name != 'admin'
+    if (current_user.role.name == 'dietitian' || current_user.role.name == 'patient')
       flash[:error] = "Access denied!"
       redirect_to root_url
     end    
