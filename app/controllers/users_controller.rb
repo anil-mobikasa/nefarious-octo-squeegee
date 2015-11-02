@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  
-  #before_action :authenticate_user_role_and_redirect, only: [:dashboard]
+  before_filter :authenticate_user!
+  before_action :check_user_role
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   def dashboard
@@ -82,20 +82,4 @@ class UsersController < ApplicationController
      :uid_number, :password, :password_confirmation)
   end
 
-  def authenticate_user_role_and_redirect
-        case current_user.role.name
-            when "admin"
-                redirect_to dashboard_admin_path(current_user) and return
-
-            when "super_admin"
-                redirect_to dashboard_super_admin_path(current_user) and return
-
-            when "dietitian"
-                redirect_to dashboard_dietitian_path(current_user) and return
-
-            when "patient"
-                redirect_to dashboard_patient_path(current_user) and return
-
-        end 
-    end
 end
