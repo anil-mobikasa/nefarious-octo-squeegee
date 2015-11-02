@@ -1,5 +1,4 @@
 <%= search_form_for @q do |f| %>
-
   <%= f.label :first_name_cont %>
   <%= f.search_field :first_name_cont, :placeholder => "first name contains" %>
   <%= f.label :email_cont %>
@@ -20,7 +19,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %><%= user.last_name %></td>
+        <td><%= user.first_name %> <%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.role.name %></td>
         <td><%= link_to 'Show', user %></td>

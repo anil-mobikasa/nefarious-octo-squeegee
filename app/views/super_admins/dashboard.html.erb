@@ -1,5 +1,14 @@
 <h3 style="color:gold">SUPER ADMIN DASHBOARD</h3>
 Logged In as: <span style="color:orange"><%= current_user.email %></span>
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :first_name_cont %>
+  <%= f.search_field :first_name_cont, :placeholder => "first name contains" %>
+  <%= f.label :email_cont %>
+  <%= f.search_field :email_cont, :placeholder => "email address contains" %>
+  <%= f.submit %>
+<% end %>
+
 <h3>Listing Users</h3>
 <table border="1" style="width:90%">
   <thead>

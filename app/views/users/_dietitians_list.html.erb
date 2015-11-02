@@ -1,0 +1,8 @@
+<%= search_form_for @q do |f| %>
+  <%= f.label :first_name_cont %>
+  <%= f.search_field :first_name_cont, :placeholder => "first name contains" %>
+  <%= f.label :email_cont %>
+  <%= f.search_field :email_cont, :placeholder => "email address contains" %>
+  <%= f.submit %>
+<% end %>
+
