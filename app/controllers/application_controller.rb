@@ -19,6 +19,13 @@ class ApplicationController < ActionController::Base
   #end
   helper_method :current_user
 
+  def check_user_role
+    if current_user.role.name != 'super_admin' or current_user.role.name != 'admin'
+      flash[:error] = "Access denied!"
+      redirect_to root_url
+    end    
+  end
+
   protected
   def after_sign_in_path_for(resource)
     case resource.role.name

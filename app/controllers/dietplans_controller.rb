@@ -1,4 +1,6 @@
 class DietplansController < ApplicationController
+  before_filter :authenticate_user!
+  before_action :check_user_role
   before_action :set_dietplan, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
