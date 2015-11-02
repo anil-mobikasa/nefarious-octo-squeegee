@@ -100,6 +100,34 @@ namespace :db do
         
     
     end
-   puts "10 Admin Added"
+    puts "10 Admin Added"
+
+    @user_ids = User.where(:role_id => @dietitian_role_id).pluck(:id)
+   
+    puts "creating Steps"
+    
+    Step.populate 300 do |step|
+
+        step.step_number = 1..9
+        step.instruction = Populator.words(4..9).titleize
+              
+    
+    end
+    puts "300 Steps Added"
+
+    puts "creating Recipies"
+    Recipy.populate 300 do |recip|
+
+        recip.description = Populator.words(1..6).titleize
+        recip.cultural_preferance = Populator.words(1).titleize
+        recip.ingredients = Populator.words(1).titleize
+        recip.unit_measure = Populator.words(1).titleize
+        recip.user_id = @user_ids.sample
+        recip.amount = Populator.words(1).titleize
+        recip.dietitian_tips = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
+     
+    end
+    puts "300 recipy Added"
+
     end
 end
