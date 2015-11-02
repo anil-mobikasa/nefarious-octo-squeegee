@@ -4,7 +4,8 @@ class DietplansController < ApplicationController
   respond_to :html
 
   def index
-    @dietplans = Dietplan.all
+    @q = Dietplan.all.ransack(params[:q])
+    @dietplans = @q.result.page params[:page]
     respond_with(@dietplans)
   end
 

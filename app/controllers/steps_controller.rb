@@ -4,7 +4,9 @@ class StepsController < ApplicationController
   respond_to :html
 
   def index
-    @steps = Step.all
+    @q = Step.all.ransack(params[:q])
+    @steps = @q.result.page params[:page]
+
     respond_with(@steps)
   end
 

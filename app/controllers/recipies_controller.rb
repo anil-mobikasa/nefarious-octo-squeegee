@@ -4,7 +4,9 @@ class RecipiesController < ApplicationController
   respond_to :html
 
   def index
-    @recipies = Recipy.all
+    @q = Recipy.all.ransack(params[:q])
+    @recipies = @q.result.page params[:page]
+
     respond_with(@recipies)
   end
 

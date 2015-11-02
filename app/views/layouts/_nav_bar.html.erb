@@ -7,16 +7,25 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
-      <%= link_to image_tag("logo.jpg", alt:""), root_path, :class => "navbar-brand"%>
+      <% unless user_signed_in? %>
+        <%= link_to image_tag("logo.jpg", alt:""), root_path, :class => "navbar-brand"%>
+      <% end %>
+      <% if user_signed_in? %>
+        <%= link_to image_tag("logo.jpg", alt:""), "/#{current_user.role.name}s/#{current_user.id}/dashboard", :class => "navbar-brand"%>
+      <% end %>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right menu">
+        <% unless user_signed_in? %>
         <li><%= link_to "About"%></li>
         <li><%= link_to "How it Works"%></li>
         <li><%= link_to "Blog" %></li>
+        <% end %>
         <% if user_signed_in? %>
         <%# dashb = "dashboard_"+"#{current_user.role.name}"+"_path" %>
-        <li><%= link_to "Diet Plan", dietplans_path %></li>
+        <li><%= link_to "Diet Plans", dietplans_path %></li>
+        <li><%= link_to "Recipies", recipies_path %></li>
+        <li><%= link_to "Steps", steps_path %></li>
         <li><%= link_to "Dashboard", "/#{current_user.role.name}s/#{current_user.id}/dashboard" %></li>
         <li><%= link_to "Edit profile", edit_user_registration_path %></li>
         <li><%= link_to "Sign out", destroy_user_session_path %></li>

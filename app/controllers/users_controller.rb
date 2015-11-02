@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-      @q = User.all.ransack(params[:q])
+    @q = User.all.ransack(params[:q])
     @users = @q.result.page params[:page]
     end
 
