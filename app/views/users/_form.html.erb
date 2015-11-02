@@ -25,7 +25,8 @@
   <div class="control-group">
     <%= f.label :role_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :role_id, :class => 'form-control' %>
+      <%#= f.text_field :role_id, :class => 'form-control' %>
+      <%= f.collection_select(:role_id, Role.all, :id, :name, :prompt => "Select a Role") %>
     </div>
     <%= error_span(@user[:role_id]) %>
   </div>
@@ -33,6 +34,8 @@
     <%= f.label :email, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :email, :class => 'form-control' %>
+      <%= f.hidden_field :password, :value => '12345678' %>
+      <%= f.hidden_field :password_confirmation, :value => '12345678' %>
     </div>
     <%= error_span(@user[:email]) %>
   </div>
@@ -103,20 +106,20 @@
     </div>
     <%= error_span(@user[:address]) %>
   </div>
-  <div class="control-group">
-    <%= f.label "Date of Birth", :class => 'control-label' %>
+  <!-- <div class="control-group">
+    <%#= f.label "Date of Birth", :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :dob, :class => 'form-control' %>
+      <%#= f.date_select :dob, :class => 'form-control' %>
     </div>
-    <%= error_span(@user[:dob]) %>
+    <%#= error_span(@user[:dob]) %>
   </div>
   <div class="control-group">
-    <%= f.label "Date of Joining", :class => 'control-label' %>
+    <%#= f.label "Date of Joining", :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :doj, :class => 'form-control' %>
+      <%#= f.date_select :doj, :class => 'form-control' %>
     </div>
-    <%= error_span(@user[:doj]) %>
-  </div>
+    <%#= error_span(@user[:doj]) %>
+  </div> -->
   
   <%= f.submit nil, :class => 'btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

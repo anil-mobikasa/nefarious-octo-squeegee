@@ -1,34 +1,25 @@
 Rails.application.routes.draw do
-  resources :dietplans
+  #resources :dietplans
 
   resources :steps
 
   resources :recipies
 
   devise_for :users
- 
-  #resources :users#, only: [] do 
-  #  collection do
-  #    get 'dashboard'
-  #  end
-  #end
+
+  scope '/admin-panel' do
+    resources :users, :dietplans
+  end
 
   resources :admins, only: [] do 
     member do
-      #resources :users
       get 'dashboard'
-    end
-    collection do
-      resources :users
     end
   end
 
   resources :super_admins, only: [] do 
     member do      
       get 'dashboard'
-    end
-    collection do
-      resources :users
     end
   end
 
