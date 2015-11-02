@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
   before_save :assign_role
   
   def assign_role
+    #self.password = "12345678" if self.password.nil?
+    #self.password_confirmation = "12345678" if self.password_confirmation.nil?
     self.role = Role.find_by name: "patient" if self.role.nil?
   end
 
