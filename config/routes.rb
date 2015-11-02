@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :super_admin, only: [] do 
+  resources :super_admins, only: [] do 
     member do
       get 'dashboard'
     end

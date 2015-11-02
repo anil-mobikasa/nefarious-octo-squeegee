@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
       when "admin"
         dashboard_admin_path(resource)
       when "super_admin"
-        dashboard_super_admin_path(resource)
+        dashboard_super_admins_path(resource)
       when "dietitian"
         dashboard_dietitian_path(resource)
       when "patient"

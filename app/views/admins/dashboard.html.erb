@@ -1,5 +1,22 @@
 <h3 style="color:gold">ADMIN DASHBOARD</h3>
 Logged In as: <span style="color:orange"><%= current_user.email %></span>
+
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :first_name_cont %>
+  <%= f.search_field :first_name_cont %>
+  <%= f.label :email_cont %>
+  <%= f.search_field :email_cont %>
+  
+  <%#= f.label :articles_title_start %>
+  <%#= f.search_field :articles_title_start %>
+
+ 
+  <%#= f.label :name_or_description_or_email_or_articles_title_cont %>
+  <%#= f.search_field :name_or_description_or_email_or_articles_title_cont %>
+
+  <%= f.submit %>
+<% end %>
 <h3>Listing Users</h3>
 
 <table border="1" style="width:90%">
@@ -15,7 +32,7 @@ Logged In as: <span style="color:orange"><%= current_user.email %></span>
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.first_name %><%= user.last_name %></td>
+        <td><%= user.first_name %> <%= user.last_name %></td>
         <td><%= user.email %></td>
         <td><%= user.role.name %></td>
         <td><%= link_to 'Show', user %></td>

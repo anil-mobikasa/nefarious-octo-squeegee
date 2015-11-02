@@ -4,7 +4,8 @@ class AdminsController < ApplicationController
 
 
   def dashboard
-    @users = User.all.page params[:page]	
+    @q = User.all.ransack(params[:q])
+    @users = @q.result.page params[:page]	
   end
 
 
