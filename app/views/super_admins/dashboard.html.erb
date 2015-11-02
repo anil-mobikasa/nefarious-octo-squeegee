@@ -1,40 +1,5 @@
 <h3 style="color:gold">SUPER ADMIN DASHBOARD</h3>
 Logged In as: <span style="color:orange"><%= current_user.email %></span>
 
-<%= search_form_for @q do |f| %>
-  <%= f.label :first_name_cont %>
-  <%= f.search_field :first_name_cont, :placeholder => "first name contains" %>
-  <%= f.label :email_cont %>
-  <%= f.search_field :email_cont, :placeholder => "email address contains" %>
-  <%= f.submit %>
-<% end %>
+<%= render "users/users_list" %>
 
-<h3>Listing Users</h3>
-<table border="1" style="width:90%">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Role</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %> <%= user.last_name %></td>
-        <td><%= user.email %></td>
-        <td><%= user.role.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<%= paginate @users %>
-<br>
-<%= link_to 'New User', new_user_path %>

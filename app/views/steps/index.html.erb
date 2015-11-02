@@ -32,7 +32,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @steps %></br>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_step_path,
             :class => 'btn btn-primary' %>

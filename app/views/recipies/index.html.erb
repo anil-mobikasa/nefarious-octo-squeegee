@@ -42,7 +42,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @recipies %></br>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_recipy_path,
             :class => 'btn btn-primary' %>

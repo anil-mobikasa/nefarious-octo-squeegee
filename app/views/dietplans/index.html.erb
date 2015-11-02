@@ -36,7 +36,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= paginate @dietplans %></br>
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_dietplan_path,
             :class => 'btn btn-primary' %>
