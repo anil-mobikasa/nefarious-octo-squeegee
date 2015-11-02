@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :dietplans
+
   devise_for :users
  
   #resources :users#, only: [] do 
