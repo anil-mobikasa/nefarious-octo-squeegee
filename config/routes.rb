@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  resources :dietplans
+
   devise_for :users
  
-  resources :users#, only: [] do 
+  #resources :users#, only: [] do 
   #  collection do
   #    get 'dashboard'
   #  end
@@ -9,13 +11,20 @@ Rails.application.routes.draw do
 
   resources :admins, only: [] do 
     member do
+      #resources :users
       get 'dashboard'
+    end
+    collection do
+      resources :users
     end
   end
 
   resources :super_admins, only: [] do 
-    member do
+    member do      
       get 'dashboard'
+    end
+    collection do
+      resources :users
     end
   end
 

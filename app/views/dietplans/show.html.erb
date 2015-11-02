@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @dietplan.title %>
+</p>
+
+<p>
+  <strong>Description:
+  <%= @dietplan.description %>
+</p>
+
+<p>
+  <strong>Recipies:</strong>
+  <%= @dietplan.recipies %>
+</p>
+
+<p>
+  <strong>Step:</strong>
+  <%= @dietplan.step %>
+</p>
+
+<%= link_to 'Edit', edit_dietplan_path(@dietplan) %> |
+<%= link_to 'Back', dietplans_path %>

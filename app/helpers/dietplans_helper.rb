@@ -1,0 +1,2 @@
+module DietplansHelper
+end

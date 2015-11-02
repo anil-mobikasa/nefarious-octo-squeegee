@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Listing Dietplans</h3>
+
+<table border="1" style="width:90%">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Recipies</th>
+      <th>Step</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dietplans.each do |dietplan| %>
+      <tr>
+        <td><%= dietplan.title %></td>
+        <td><%= dietplan.description %></td>
+        <td><%= dietplan.recipies %></td>
+        <td><%= dietplan.step %></td>
+        <td><%= link_to 'Show', dietplan %></td>
+        <td><%= link_to 'Edit', edit_dietplan_path(dietplan) %></td>
+        <td><%= link_to 'Destroy', dietplan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dietplan', new_dietplan_path %>
