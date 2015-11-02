@@ -25,7 +25,7 @@ namespace :db do
         user.gender = ['Male', 'Female']
         user.approved = [true, false]
         user.location = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
-        user.birthdate = 60.years.ago..22.years.ago
+        user.agreement = [true, false]
         user.height = 140..190
         user.weight = 20..150
         user.health_insurance = 200000..1000000
@@ -56,7 +56,7 @@ namespace :db do
         user.role_id = @dietitian_role_id
         user.gender = ['Male', 'Female']
         user.location = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
-        user.birthdate = 60.years.ago..22.years.ago
+        user.agreement = [true, false]
         user.height = 140..190
         user.weight = 20..150
         user.health_insurance = 200000..1000000
@@ -86,7 +86,7 @@ namespace :db do
         user.role_id = @admin_role_id
         user.gender = ['Male', 'Female']
         user.location = ['Delhi','Mumbai', 'Jaipur', 'Chennai']
-        user.birthdate = 60.years.ago..22.years.ago
+        user.agreement = [true, false]
         user.height = 140..190
         user.weight = 20..150
         user.health_insurance = 200000..1000000
