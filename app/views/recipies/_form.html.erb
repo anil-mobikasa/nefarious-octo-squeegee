@@ -1,0 +1,72 @@
+<%= form_for @recipy, :html => { :class => "form-horizontal recipy" } do |f| %>
+
+    <% if @recipy.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@recipy.errors.count, "error") %> prohibited this recipy from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @recipy.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :description, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:description]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :cultural_preferance, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cultural_preferance, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:cultural_preferance]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :ingredients, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ingredients, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:ingredients]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :unit_measure, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :unit_measure, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:unit_measure]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :amount, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :amount, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:amount]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :dietitian_tips, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :dietitian_tips, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:dietitian_tips]) %>
+  </div>
+  <div class="control-group">
+     <div class="controls">
+      <%= f.hidden_field :user_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@recipy[:user_id]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            recipies_path, :class => 'btn btn-default' %>
+
+<% end %>

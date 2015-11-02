@@ -1,0 +1,31 @@
+<%- model_class = Recipy -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @recipy.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:cultural_preferance) %>:</strong></dt>
+  <dd><%= @recipy.cultural_preferance %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:ingredients) %>:</strong></dt>
+  <dd><%= @recipy.ingredients %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:unit_measure) %>:</strong></dt>
+  <dd><%= @recipy.unit_measure %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:amount) %>:</strong></dt>
+  <dd><%= @recipy.amount %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:dietitian_tips) %>:</strong></dt>
+  <dd><%= @recipy.dietitian_tips %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
+  <dd><%= @recipy.user_id %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              recipies_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_recipy_path(@recipy), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              recipy_path(@recipy),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

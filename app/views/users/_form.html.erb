@@ -1,93 +1,125 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= form_for @user, :html => { :class => "form-horizontal user" } do |f| %>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @user.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
+  <div class="control-group">
+    <%= f.label :username, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :username, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:username]) %>
   </div>
+  <div class="control-group">
+    <%= f.label :role_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :role_id, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:role_id]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :email, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :email, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:email]) %>
+  </div>
+  
+  
+   <div class="control-group">
+    <%= f.label :first_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :first_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:first_name]) %>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :last_name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :last_name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:last_name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :location, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :location, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:location]) %>
+  </div>
+  
+  <div class="control-group">
+    <%= f.label :gender, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gender, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:gender]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :height, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :height, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:height]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :weight, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :weight, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:weight]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :health_insurance, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :health_insurance, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:health_insurance]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :uid_number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :uid_number, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:uid_number]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :address, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :address, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:address]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label "Date of Birth", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :dob, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:dob]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label "Date of Joining", :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :doj, :class => 'form-control' %>
+    </div>
+    <%= error_span(@user[:doj]) %>
+  </div>
+  
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            users_path, :class => 'btn btn-default' %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-<div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :middle_name %><br />
-    <%= f.text_field :middle_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :birthdate %><br />
-    <%= f.date_select :birthdate, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label "Date of Birth" %><br />
-    <%= f.date_select :dob, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :height %><br />
-    <%= f.text_field :height, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :weight %><br />
-    <%= f.text_field :weight, autofocus: true %>
-  </div>
-
-   <div class="field">
-    <%= f.label :health_insurance %><br />
-    <%= f.text_field :health_insurance, autofocus: true %>
-  </div>
-
-   <div class="field">
-    <%= f.label :uid_number %><br />
-    <%= f.text_field :uid_number, autofocus: true %>
-  </div>
-
-   <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address, autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :role_id %><br>
-    <%= collection_select(:user, :role_id, Role.all, :id, :name, prompt: true) %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password, placeholder: "Leave blank if unchanged" %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

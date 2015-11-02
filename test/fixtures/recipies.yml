@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  cultural_preferance: MyString
+  ingredients: MyString
+  unit_measure: MyString
+  amount: MyString
+  dietitian_tips: MyString
+  user_id: 
+
+two:
+  description: MyString
+  cultural_preferance: MyString
+  ingredients: MyString
+  unit_measure: MyString
+  amount: MyString
+  dietitian_tips: MyString
+  user_id: 

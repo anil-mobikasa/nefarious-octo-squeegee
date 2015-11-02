@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :dietplans
 
+  resources :steps
+
+  resources :recipies
+
   devise_for :users
  
   #resources :users#, only: [] do 

@@ -1,0 +1,38 @@
+<%= form_for @step, :html => { :class => "form-horizontal step" } do |f| %>
+
+    <% if @step.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @step.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :step_number, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :step_number, :class => 'form-control' %>
+    </div>
+    <%= error_span(@step[:step_number]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :instruction, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :instruction, :class => 'form-control' %>
+    </div>
+    <%= error_span(@step[:instruction]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            steps_path, :class => 'btn btn-default' %>
+
+<% end %>

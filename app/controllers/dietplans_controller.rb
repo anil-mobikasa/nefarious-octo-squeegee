@@ -1,6 +1,5 @@
 class DietplansController < ApplicationController
   before_action :set_dietplan, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   respond_to :html
 
@@ -43,6 +42,6 @@ class DietplansController < ApplicationController
     end
 
     def dietplan_params
-      params.require(:dietplan).permit(:title, :description, :recipies, :step)
+      params.require(:dietplan).permit(:title, :recipy_id, :step_id, :user_id)
     end
 end
