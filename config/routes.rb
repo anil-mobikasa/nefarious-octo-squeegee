@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+ 
+  get 'about', to: 'welcome#about'
+  get 'blog', to: 'welcome#blog'
+  get 'how_it_works', to: 'welcome#how_it_works'
+  
+
   scope '/admin-panel' do
     resources :users, :dietplans
   end
