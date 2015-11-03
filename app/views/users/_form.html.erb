@@ -33,9 +33,7 @@
   <div class="control-group">
     <%= f.label :email, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :email, :class => 'form-control' %>
-      <%= f.hidden_field :password, :value => '12345678' %>
-      <%= f.hidden_field :password_confirmation, :value => '12345678' %>
+      <%= f.text_field :email, :class => 'form-control' %>      
     </div>
     <%= error_span(@user[:email]) %>
   </div>
